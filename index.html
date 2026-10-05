@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dhanashri Kiran Pawar - E-Commerce Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>Dhanashri</span> Kiran Pawar
+        </div>
+
+        <div class="student-info">
+            <strong>Dhanashri Kiran Pawar</strong>
+            <small>Department: Computer</small>
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <button id="searchBtn">
+                🔍
+            </button>
+
+        </div>
+
+        <button class="cart-button" id="cartButton">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                WELCOME TO MY STORE
+            </p>
+
+            <h1>
+                Discover Products<br>
+                You'll Love
+            </h1>
+
+            <p>
+                Shop the latest fashion, electronics,
+                shoes and accessories at amazing prices.
+            </p>
+
+            <button class="shop-button" id="shopNow">
+                Shop Now →
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+            🛍️
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDENT DETAILS ================= -->
+
+    <section class="student-section">
+
+        <div class="student-card">
+
+            <h2>Dhanashri Kiran Pawar</h2>
+
+            <p>
+                <strong>Department:</strong> Computer
+            </p>
+
+            <p>
+                E-Commerce Store Project
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <div class="section-title">
+            <h2>Shop by Category</h2>
+        </div>
+
+        <div class="category-list">
+
+            <button
+                class="category active"
+                data-category="All">
+                All
+            </button>
+
+            <button
+                class="category"
+                data-category="Electronics">
+                📱 Electronics
+            </button>
+
+            <button
+                class="category"
+                data-category="Fashion">
+                👕 Fashion
+            </button>
+
+            <button
+                class="category"
+                data-category="Shoes">
+                👟 Shoes
+            </button>
+
+            <button
+                class="category"
+                data-category="Accessories">
+                👜 Accessories
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <main
+        class="products-section"
+        id="productsSection">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="subtitle">
+                    OUR COLLECTION
+                </p>
+
+                <h2>Featured Products</h2>
+
+            </div>
+
+            <span id="productCount">
+                0 Products
+            </span>
+
+        </div>
+
+
+        <div
+            class="products-grid"
+            id="productsGrid">
+        </div>
+
+
+        <div
+            class="no-products"
+            id="noProducts">
+
+            <div>😕</div>
+
+            <h3>
+                No products found
+            </h3>
+
+            <p>
+                Try searching for something else.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= CART OVERLAY ================= -->
+
+    <div
+        class="overlay"
+        id="overlay">
+    </div>
+
+
+    <!-- ================= CART SIDEBAR ================= -->
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar">
+
+        <div class="cart-header">
+
+            <div>
+
+                <h2>Your Cart</h2>
+
+                <p id="cartItemsText">
+                    0 items
+                </p>
+
+            </div>
+
+            <button
+                class="close-cart"
+                id="closeCart">
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems">
+        </div>
+
+
+        <div
+            class="empty-cart"
+            id="emptyCart">
+
+            <div class="empty-cart-icon">
+                🛒
+            </div>
+
+            <h3>
+                Your cart is empty
+            </h3>
+
+            <p>
+                Add some products to your cart.
+            </p>
+
+            <button id="continueShopping">
+                Continue Shopping
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-footer"
+            id="cartFooter">
+
+            <div class="subtotal">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <p class="shipping-text">
+                🚚 Free shipping on all orders
+            </p>
+
+            <button
+                class="checkout-button"
+                id="checkoutButton">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= PRODUCT MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="productModal">
+
+        <div class="product-modal">
+
+            <button
+                class="modal-close"
+                id="modalClose">
+                ×
+            </button>
+
+            <div
+                class="modal-content"
+                id="modalContent">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>
+                    <span>Dhanashri</span>
+                    Kiran Pawar
+                </h2>
+
+                <p>
+                    E-Commerce Store Project
+                </p>
+
+                <p>
+                    Department: Computer
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#">
+                    Home
+                </a>
+
+                <a href="#productsSection">
+                    Products
+                </a>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Customer Service
+                </h3>
+
+                <a href="#">
+                    Shipping
+                </a>
+
+                <a href="#">
+                    Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Dhanashri Kiran Pawar.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+Add this CSS to style.css
+
+To make the name and department look good in the header, add:
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #4b5563;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+.student-info strong {
+    font-size: 13px;
+    color: white;
+}
+
+.student-info small {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.student-section {
+    padding: 25px 6%;
+    background: #ffffff;
+}
+
+.student-card {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 25px;
+    border-left: 5px solid #2563eb;
+    background: #eff6ff;
+    border-radius: 8px;
+}
+
+.student-card h2 {
+    color: #1d4ed8;
+    margin-bottom: 5px;
+}
+
+.student-card p {
+    color: #4b5563;
+    margin-top: 4px;
+}
+
+@media (max-width: 800px) {
+
+    .student-info {
+        order: 2;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .search-container {
+        order: 3;
+    }
+}
+
+
+Your project will now show:
+
+Dhanashri Kiran Pawar
+Department: Computer
+E-Commerce Store Project
